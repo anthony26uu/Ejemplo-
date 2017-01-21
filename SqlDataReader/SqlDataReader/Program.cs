@@ -8,16 +8,16 @@ namespace SqlDataReade
 {
     class Program
     {
-        private static SqlConnection connection;
+        private static SqlConnection coneccion;
 
         static void Main(string[] args)
         {
-            using (connection)
+            using (coneccion)
             {
                 SqlCommand command = new SqlCommand(
-                  "SELECT CategoryID, CategoryName FROM Categories;",
-                  connection);
-                connection.Open();
+                  "SELECT ID, NAME FROM categoria;",
+                  coneccion);
+                coneccion.Open();
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -31,7 +31,7 @@ namespace SqlDataReade
                 }
                 else
                 {
-                    Console.WriteLine("No rows found.");
+                    Console.WriteLine("Esta vacio.");
                 }
                 reader.Close();
             }
