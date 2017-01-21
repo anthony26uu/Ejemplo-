@@ -13,9 +13,9 @@ class Program
 
      
         string queryString =
-            "SELECT ProductID, UnitPrice, ProductName from dbo.products "
-                + "WHERE UnitPrice > @pricePoint "
-                + "ORDER BY UnitPrice DESC;";
+            "SELECT prodcutoID, UnitPrice, nombreproducto from dbo.productos "
+                + "WHERE unidadprecio > @pricePoint "
+                + "ORDER BY unidadprecio DESC;";
 
        
         int parametro = 5;       
